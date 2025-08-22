@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Task Management System</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            min-block-size: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Main Section */
+        .welcome-section {
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .welcome-section h2 {
+            font-size: 2em;
+            margin-block-end: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome-section p {
+            font-size: 1.2em;
+            margin-block-end: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button,#drop{
+            background: #ffffff;
+            color: #2575fc;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        button:hover {
+            background: #2575fc;
+            color: white;
+            transform: scale(1.1);
+        }
+        #drop:hover {
+            background: #2575fc;
+            color: white;
+            transform: scale(1.1);
+        }
+
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+        .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .dropdown-button {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+
+                .dropdown-button:hover {
+                    background-color: #45a049;
+                }
+
+                /* Dropdown menu styling */
+                .dropdown-menu {
+                    display: none;
+                    position: absolute;
+                    background-color: #f9f9f9;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    border-radius: 4px;
+                    z-index: 1;
+                    min-inline-size: 130px;
+                    padding: 10px;
+                }
+
+                .dropdown-menu button {
+                    background-color: #f1f1f1;
+                    color: black;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    inline-size: 100%;
+                    margin: 5px 0;
+                }
+
+                .dropdown-menu button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Show dropdown menu on hover */
+                .dropdown:hover .dropdown-menu {
+                    display: block;
+                }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project Task Management System </h1>
+    </header>
+    <main>
+        <section class="welcome-section">
+            <h2>Welcome to Task Management</h2>
+            <p>Efficiently manage and track your tasks with ease.</p>
+            <div class="button-container">
+                <a href="adminlogin.php"><button id="adminLogin">Admin Login</button></a>
+                <a href="teamlogin.php"><button id="userLogin">Team Login</button></a>
+            </div><br>
+            <div class="dropdown">
+    <button class="dropdown-button" id="drop">Registration</button>
+    <div class="dropdown-menu">
+        <a href="adreg.php"><button onclick="alert('Admin Registration Selected')" style="background-color:green;color:azure;">Admin Registration</button></a>
+        <a href="tereg.php"><button onclick="alert('Team Registration Selected')" style="background-color:red;color:azure;">Team Registration</button></a>
+    </div>
+</div></section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Project Task Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
