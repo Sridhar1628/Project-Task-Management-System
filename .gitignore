@@ -1,1 +1,27 @@
+# === Sensitive configuration ===
 .env
+config.php
+email_config.php
+
+# === User uploads (large/binary, not needed in repo) ===
+uploads/
+team_uploads/
+
+# === Logs & dumps ===
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# === OS/editor noise ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# === Dependency directories (if used) ===
+node_modules/
+vendor/
+
+# === PHP server preview files ===
+.php-preview-router.php
